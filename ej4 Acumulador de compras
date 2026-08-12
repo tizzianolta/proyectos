@@ -1,0 +1,14 @@
+let precios:number|null; 
+let contp:number = 0;
+let totalacum:number = 0;
+do {
+precios=Number(prompt("Ingrese los precios de los productos"))
+while(isNaN(precios) || precios < 0) {
+    alert("Ingrese un valor valido")
+    precios=Number(prompt("Ingrese los precios de los productos"))
+}
+contp++
+totalacum += precios
+} while(precios !== 0)
+
+console.log(`El total es: ${totalacum}`)
