@@ -1,0 +1,14 @@
+let num: number = Number(prompt("ingese un numero positivo"));
+while (isNaN(num) || num <= 0) {
+    alert("Número o expreción invalida, por favor ingrese un número negativo")
+    num = Number(prompt("ingese un numero positivo"));
+}
+while (num >= 0) {
+    console.log(`${num}`)
+    for (num <= num; num--) {
+        console.log(`${num}`)
+        if (num === 0) {
+            console.log("Despegue")
+        }
+    }
+}
