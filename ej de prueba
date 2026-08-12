@@ -1,0 +1,16 @@
+function saludar(nombre:string){
+console.log("hola, "+ nombre)
+console.log("hola, "+ nombre )
+}
+
+interface Alumno{
+nombre:string
+nota:number
+}
+
+let alumno:Alumno={
+    nombre:"Ana",
+    nota:9 }
+
+    console.log(alumno.nota)
+    
