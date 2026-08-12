@@ -1,0 +1,30 @@
+function ej1(): void {
+let opcion: string | null = prompt("Elegi un día");
+
+switch (opcion) {
+  case "1":
+    console.log("El día 1 es: Lunes");
+    break; // sin break, sigue ejecutando el case de abajo
+  case "2":
+    console.log("El día 2 es: Martes");
+    break;
+  case "3":
+    console.log("El día 3 es: Miercoles");
+    break;
+  case "4":
+    console.log("El día 4 es: Jueves ");
+    break;
+  case "5":
+    console.log("El día 5 es: Viernes ");
+    break;
+  case "6":
+    console.log("El día 6 es: Sabádo ");
+    break;
+  case "7":
+    console.log("El día 7 es: Domingo ");
+    break;
+  default: // se ejecuta si ningún case coincide
+    console.log("Dia inválido");
+}
+}
+ej1();
