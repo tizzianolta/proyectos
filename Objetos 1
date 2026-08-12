@@ -1,0 +1,10 @@
+interface Pelicula {
+    titulo:string
+    anio:number
+    puntaje:number
+}
+const peli1:Pelicula = {titulo: "Spiderman", anio: 2026, puntaje:8.5}
+const peli2:Pelicula = {titulo: "El conjuro 2", anio: 2016, puntaje:9.5}
+
+console.log(peli1.titulo)
+console.log(peli2.titulo)
