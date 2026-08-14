@@ -1,0 +1,19 @@
+interface Estudiante {
+  id:number, 
+  nombre:string, 
+  apellido:string,
+  edad:number,
+  curso:number,
+  promedio:number,
+  activo?:boolean,
+  email?:string,
+};
+
+const estudiantes: Estudiante[] = [
+{ id: 1, nombre: 'Jenaro', apellido: 'Avila', edad: 17, curso: 5 ,
+promedio: 1 },
+{ id: 2, nombre: 'Rodrigo', apellido: 'Muñoz', edad: 18, curso: 5,
+promedio: 4, activo: true },
+{ id: 3, nombre: 'Tizziano', apellido: 'Acuña', edad: 17, curso: 5,
+promedio: 1, email: 'tizziano.bittar@gmail.com' },
+];
