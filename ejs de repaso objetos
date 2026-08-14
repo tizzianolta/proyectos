@@ -1,0 +1,32 @@
+interface Libro {id:number; titulo:string; autor:string; paginas:number; disponible ?: boolean}
+
+const lib1: Libro = {id:1, titulo: `Harry Potter`, autor: `J.K Rowling`, paginas: 3400, disponible: true}
+const lib2: Libro = {id:2, titulo: `La Odisea`, autor: `Homero`, paginas: 480, disponible: true}
+
+function describir(e:Libro):string {
+  return `Datos del libro: id: ${e.id}, titulo: ${e.titulo}, autor: ${e.autor}, paginas: ${e.paginas}|  `
+}
+
+const libr: Libro[] = [
+  {id:1, titulo: `Harry Potter`, autor: `J.K Rowling`, paginas: 3400, disponible: true},
+  {id:2, titulo: `La Odisea`, autor: `Homero`, paginas: 480, disponible: true},
+  {id:3, titulo: `La Soledad`, autor: `Gabriel Rolón`, paginas: 296, disponible: true},
+];
+
+interface LibroConprecio extends Libro {
+precio?:number
+}
+
+const lib3: LibroConprecio={id:1, titulo: `Pokemon: Sol Y Luna`, autor: ` Hidenori Kusaka `, paginas: 188, disponible: true,}
+const lib4: LibroConprecio={id:2, titulo: `Pokemon Adventures`, autor: `Hidenori Kusaka`, paginas: 200, disponible: true, precio: 2500}
+
+function describe(e:LibroConprecio):string {
+  return `Datos del libro: id: ${e.id}, titulo: ${e.titulo}, autor: ${e.autor}, paginas: ${e.paginas}, precio: ${e.precio}`
+}
+
+
+lib3.precio = 1500
+
+console.log(describir(lib1));
+console.log(describe(lib3));
+console.log(libr[1].titulo)
