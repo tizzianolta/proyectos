@@ -11,9 +11,41 @@ interface Estudiante {
 
 const estudiantes: Estudiante[] = [
 { id: 1, nombre: 'Jenaro', apellido: 'Avila', edad: 17, curso: 5 ,
-promedio: 1 },
+promedio: 6 },
 { id: 2, nombre: 'Rodrigo', apellido: 'Muñoz', edad: 18, curso: 5,
-promedio: 4, activo: true },
+promedio: 7, activo: true },
 { id: 3, nombre: 'Tizziano', apellido: 'Acuña', edad: 17, curso: 5,
-promedio: 1, email: 'tizziano.bittar@gmail.com' },
+promedio: 2, email: 'tizziano.bittar@gmail.com' },
 ];
+
+function estaAprobado(e:Estudiante):boolean {
+ return e.promedio >=6
+}
+
+function presentarEstudiante(e:Estudiante):string{
+const estado = estaAprobado(e) ? `Aprobado` : `Desaprobado`
+return `[${e.id}] Apellido: ${e.apellido} | Nombre: ${e.nombre} | Curso: ${e.curso}to | Promedio: ${e.promedio} | Calificación: ${estado}`
+
+}
+function recorrerArray():void{
+estudiantes.forEach(e => {
+        console.log(`${e.presentarEstudiante()}`)
+    });
+}
+
+console.log("Pruebo el metodo de mostrar el aprobado con boolean")
+console.log(`-------------------------`)
+console.log(estaAprobado(estudiantes[0]));
+console.log(estaAprobado(estudiantes[1]));
+console.log(estaAprobado(estudiantes[2]));
+console.log(`-------------------------`)
+console.log("Pruebo el metodo de presentar al estudiante")
+console.log(`-------------------------`)
+console.log(presentarEstudiante(estudiantes[0]))
+console.log(presentarEstudiante(estudiantes[1]))
+console.log(presentarEstudiante(estudiantes[2]))
+console.log(`-------------------------`)
+console.log("Pruebo el metodo")
+console.log(`-------------------------`)
+console.log(recorrerArray())
+console.log(`-------------------------`)
