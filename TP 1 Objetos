@@ -27,10 +27,19 @@ const estado = estaAprobado(e) ? `Aprobado` : `Desaprobado`
 return `[${e.id}] Apellido: ${e.apellido} | Nombre: ${e.nombre} | Curso: ${e.curso}to | Promedio: ${e.promedio} | Calificación: ${estado}`
 
 }
-function recorrerArray():void{
-estudiantes.forEach(e => {
-        console.log(`${e.presentarEstudiante()}`)
-    });
+function recorrerArray():string{
+let contaprobados:number = 0
+for(let i:number=0 ;i <= estudiantes.length;i++){
+
+  console.log(`${presentarEstudiante(estudiantes[i])}`)
+
+ if(estaAprobado(estudiantes[i])) {
+  contaprobados++;
+}else{
+return `La cantidad de aprobados son: ${contaprobados}`
+} 
+}
+console.log(`La cantidad de aprobados son: ${contaprobados}`)
 }
 
 console.log("Pruebo el metodo de mostrar el aprobado con boolean")
@@ -45,7 +54,7 @@ console.log(presentarEstudiante(estudiantes[0]))
 console.log(presentarEstudiante(estudiantes[1]))
 console.log(presentarEstudiante(estudiantes[2]))
 console.log(`-------------------------`)
-console.log("Pruebo el metodo")
+console.log("Pruebo el metodo recorrer el array")
 console.log(`-------------------------`)
 console.log(recorrerArray())
 console.log(`-------------------------`)
