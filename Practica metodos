@@ -1,0 +1,30 @@
+interface Producto {
+    id:number,
+    nombre:string,
+    precio:number,
+}
+const productos: Producto[] = [
+    {id:1, nombre:`nesquick`, precio:2600},
+    {id:2, nombre:`mantecol`, precio:2900},
+    {id:3, nombre:`coca-cola`, precio:6400},
+    {id:4, nombre:`monster`, precio:2300},
+]
+
+function ObtenerNombres():string {
+ const mapeonombre:string[] = productos.map(n => n.nombre)
+ mapeonombre.forEach(n => {
+    console.log(`${n}`)
+ })
+ return "Listado enviado"
+}
+
+function FiltrarPorPrecio():void {
+const filtrado:Producto[] = productos.filter(n => n.precio > 5000)
+}
+
+console.log("Pruebo el método de obtener nombres")
+console.log("")
+console.log(ObtenerNombres())
+console.log("Pruebo el método ")
+console.log("")
+console.log(FiltrarPorPrecio())
